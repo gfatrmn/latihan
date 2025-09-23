@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>body.html — Template Bebas</title>
+  <meta name="description" content="Template HTML bebas — cepat, responsif, dan mudah dikustomisasi." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#4f46e5;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef6;background:linear-gradient(180deg,#071028 0%, var(--bg) 100%);}
+
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#06b6d4);display:grid;place-items:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:0.95rem}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:20px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:22px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    h1{margin:0 0 8px;font-size:1.6rem}
+    p.lead{color:var(--muted);margin:0 0 18px}
+
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px}
+    .feature{background:var(--glass);padding:12px;border-radius:10px}
+
+    .sidebar .stat{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);margin-bottom:10px}
+    footer{margin-top:26px;color:var(--muted);font-size:0.9rem}
+
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;text-decoration:none;font-weight:600}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+    }
+
+    /* small utilities */
+    code{background:#071226;padding:4px 6px;border-radius:6px;color:#9bd2ff;font-size:0.9rem}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">B</div>
+        <div>
+          <div style="font-weight:700">Body.html</div>
+          <div class="muted" style="font-size:0.85rem">Template bebas — editable</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#features">Fitur</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <h1>Template <span style="color:var(--accent)">body.html</span> — Siap pakai</h1>
+        <p class="lead">File ini adalah halaman HTML tunggal yang bersih, responsif, dan mudah dikembangkan. Cocok sebagai kerangka awal proyek kecil, demo, atau latihan front-end.</p>
+
+        <div class="features" id="features">
+          <div class="feature">
+            <strong>Responsif</strong>
+            <div class="muted">Tata letak adaptif untuk layar kecil hingga desktop.</div>
+          </div>
+          <div class="feature">
+            <strong>Ringan</strong>
+            <div class="muted">Tanpa dependensi eksternal — hanya HTML/CSS/JS kecil.</div>
+          </div>
+          <div class="feature">
+            <strong>Mudah dikustom</strong>
+            <div class="muted">Ganti warna, teks, atau tata letak dalam beberapa menit.</div>
+          </div>
+          <div class="feature">
+            <strong>Contoh interaksi</strong>
+            <div class="muted">Tombol demo menampilkan notifikasi kecil.</div>
+          </div>
+        </div>
+
+        <hr style="margin:18px 0; border:0; height:1px; background:rgba(255,255,255,0.03)">
+        <a class="btn" href="#" onclick="notify();return false">Coba Notifikasi</a>
+        <pre style="margin-top:14px;background:#071226;padding:12px;border-radius:8px;overflow:auto"><code>&lt;!-- simpan sebagai body.html --&gt;</code></pre>
+      </section>
+
+      <aside class="card sidebar">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div>
+            <div style="font-weight:700">Status Proyek</div>
+            <div class="muted">Versi: 1.0 • Ult: 23 Sep 2025</div>
+          </div>
+          <div>
+            <button onclick="toggleTheme()" title="Toggle theme" style="padding:8px 10px;border-radius:8px;border:0;background:#0b1220;color:var(--muted);cursor:pointer">Toggle</button>
+          </div>
+        </div>
+
+        <div class="stat">
+          <div>
+            <div style="font-weight:700">Pengunjung</div>
+            <div class="muted">Hari ini</div>
+          </div>
+          <div>1,243</div>
+        </div>
+
+        <div class="stat">
+          <div>
+            <div style="font-weight:700">Tugas</div>
+            <div class="muted">Selesai</div>
+          </div>
+          <div>8 / 12</div>
+        </div>
+
+        <div style="margin-top:8px">
+          <a class="btn" href="#about">Pelajari Lebih</a>
+        </div>
+
+        <footer>
+          <div id="about" style="margin-top:12px"><strong>Tentang</strong>
+            <div class="muted" style="margin-top:6px">Template sederhana untuk demonstrasi. Ubah isi <code>body.html</code> sesuai kebutuhan.</div>
+          </div>
+        </footer>
+      </aside>
+    </main>
+
+    <footer style="text-align:center">
+      <div class="muted">© 2025 — Buat oleh Anda · Template bebas</div>
+    </footer>
+  </div>
+
+  <script>
+    function notify(){
+      // notifikasi demo (fallback sederhana)
+      if(Notification && Notification.permission === 'granted'){
+        new Notification('Selamat!', { body: 'Ini notifikasi demo dari body.html' })
+      }else if(Notification && Notification.permission !== 'denied'){
+        Notification.requestPermission().then(p => { if(p==='granted') notify(); })
+      }else{
+        alert('Ini notifikasi demo — browser Anda tidak mendukung Notification API atau permission ditolak.');
+      }
+    }
+
+    function toggleTheme(){
+      const el=document.documentElement;
+      if(el.style.filter){ el.style.filter=''; } else { el.style.filter='brightness(1.05)'; }
+    }
+  </script>
+</body>
+</html>
